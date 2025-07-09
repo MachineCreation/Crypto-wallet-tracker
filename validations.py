@@ -1,4 +1,6 @@
 import messages as M
+import decimal as D
+import re
 
 def get_Y_N(prompt = 'Would you like to continue? Y/N: '):
     '''
@@ -84,3 +86,31 @@ def validateChoiceFromList(optionsList, prompt = None, case = 'lower'):
                 M.print_menu_options(optionsList, prompt)
             else:
                 M.print_menu_options(optionsList)
+
+def validateCurrencyUS(preprompt = None, prompt='Enter number in valid US currency format.\nExample: $1 = 1.00\n'):
+    '''
+    prompts user to enter a number with two decimal places 
+    and strips any dollar signs. then validates input. re-prompts if 
+    necessary.
+    :args: prompt: string default = 'Enter number in valid US currency format.\nExample: $1 = 1.00'
+    :inputs: num: string
+    :return: amount: decimal
+    '''
+    currencyPattern = r'^\d+\.\d{2}$'   # regex pattern for 1+ digit . 2 digit
+    if preprompt:
+        print(preprompt)
+    while True:
+        try:
+            num = input(prompt)
+            if '$' in num:
+                num = num.strip('$')    # remove possible $ symbol
+
+            if re.match(currencyPattern, num):
+                return D.Decimal(num).quantize(D.Decimal('0.01'))
+            
+            else: 
+                raise ValueError
+        except ValueError:
+            print('Invalid entry!')
+           
+    

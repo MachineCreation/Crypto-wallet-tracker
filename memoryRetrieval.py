@@ -26,3 +26,31 @@ def makeJson(data, fileName):
     '''
     with open(fileName + '.json', 'w')as f:
         json.dump(data, f, indent=4)
+
+def load_memory_dict(address):
+    '''
+    attempts to load existing memory as dict if existing memory file does
+    not exist returns an empty dict
+    :args: address: string
+    :inputs: None
+    :return: memory: Dictionary object
+    '''
+    memory = getJson(address)
+    if memory != FileNotFoundError and isinstance(memory, dict):
+        return memory
+    else:
+        return {}  
+    
+def load_memory_list(address):
+    '''
+    attempts to load existing memory as list if existing memory file does
+    not exist returns an empty list
+    :args: address: string
+    :inputs: None
+    :return: memory: list
+    '''
+    memory = getJson(address)
+    if memory != FileNotFoundError and isinstance(memory, list):
+        return memory
+    else:
+        return []

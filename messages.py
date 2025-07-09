@@ -43,6 +43,7 @@ def print_menu_options(opt, prompt = "Enter what you would like to do from the c
     print(prompt)
     for o in opt:
         print(f'-{o}')
+    print()         #for UI readability
 
 
 

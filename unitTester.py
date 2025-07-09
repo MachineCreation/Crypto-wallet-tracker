@@ -2,13 +2,19 @@ import messages as M
 import validations as V
 import memoryRetrieval as MR
 import crypto as C
-import lab2 as L2
-from datetime import datetime, timedelta
+import walletTracker as L2
+from datetime import date, datetime, timedelta
 
 # test welcome message
 
 # M.welcomeMessage('crypto')
 # M.welcomeMessage('crypto', "pickles are the best")
+# ------------------------------------------------------------------------------
+
+# test validations
+
+# cec = V.validateCurrencyUS()
+# print(cec)
 # ------------------------------------------------------------------------------
 
 # test main menu loop
@@ -19,10 +25,10 @@ from datetime import datetime, timedelta
 # M.print_menu_options(options
 # V.validateChoiceFromList(options)
 
-memory = {}
-COINS = ['BTC', 'LTC', 'ETH', 'XTZ', 'SOL', 'SHIB']
-d = L2.add_to_portfolio(COINS, memory)
-print(d)
+# memory = {}
+# COINS = ['BTC', 'LTC', 'ETH', 'XTZ', 'SOL', 'SHIB']
+# d = L2.add_to_portfolio(COINS, memory)
+# print(d)
 
 # test = {
 #     'BTC': {
@@ -34,8 +40,9 @@ print(d)
 # }
 # L2.print_investment(test['BTC'])
 
-# sol = C.get_30day_percent('SOL')
-# print(sol)
+day = date.today()
+sol = C.get_30day_percent('SOL', day)
+print(sol)
 # ------------------------------------------------------------------------------
 
 # test memory retrieval
@@ -44,3 +51,7 @@ print(d)
 # f = L2.load_memory('app_name')
 # print(f)
 # ------------------------------------------------------------------------------
+
+# test crypto.py
+
+# C.compileSupportedCoinsList()
