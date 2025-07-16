@@ -46,4 +46,5 @@ Now you can run the program locally by pressing the play icon in the top right c
 |:----------:|:-----------------------------------:|:-------:|
 | <span style='color:green'>07082025 | Initial commit including first working version of the wallet investment tracker | <span style='color: gold'>crypto.py</br> lab2.py</br> memoryRetrieval.py</br> messages.py</br> unitTester.py</br> validations.py</br> .gitignore</span>
 | <span style='color:green'> 07092025 | Added:</br> -validateCurrencyUS function to validations.py</br>-getCoinTicker getCoinHistoricalData compileSupportedCoinsList to crypto.py<br>-start function to walletTracker.py<br><br> Moved:</br>-run_menu to menu.py</br> -load_memory to memoryRetrieval.py</br></br>Modified:<br>-get_30day_percent in crypto.py<br><br> | <span style='color: gold'>readMe.md</br> constants.py</br> menu.py<br>coin_list.json<br> requirements.txt |
+| <span style='color:green'> 07162025 | Added:<br>delete_from_portfolio() to menu.py<br>printConfirmation() to messages.py | <span style='color: gold'>** |
 | <span style='color:green'> ** | *** | <span style='color: gold'>** |

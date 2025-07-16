@@ -18,7 +18,7 @@ def run_menu(memory, coins):
     :inputs: None
     :return: None
     '''
-    options = ['add', 'view', 'quit']       # normally wouldn't create a constant here. might move it later
+    options = ['add', 'view', 'delete', 'quit']       # normally wouldn't create a constant here. might move it later
     while True:
             
         if memory != {}:    
@@ -34,6 +34,8 @@ def run_menu(memory, coins):
                 memory = add_to_portfolio(coins, memory)
             elif choice == 'view':
                 view_portfolio(memory)
+            elif choice == 'delete':
+                memory = delete_from_portfolio(memory)
             else:
                 return memory
         else:
@@ -133,3 +135,31 @@ def view_portfolio(memory):
     )
     # wait for user to finish viewing portfolio
     finished = input('Press enter to continue.\n')
+
+def delete_from_portfolio(memory):
+    '''
+    removes investment dict item from portfolio memory.
+    :args: memory: dictionary object
+    :inputs: choice: int
+    :return: memory: dictionary object
+    '''
+    # set vars for choices
+    deletePrompt = 'Please choose investment you would like to delete\n or type quit to go back to the main menu'
+    investments = list(memory.keys()) + ['QUIT']
+
+    # print choices
+    M.print_menu_options(investments, deletePrompt)
+
+    # get choice from user
+    choice = V.validateChoiceFromList(investments, case='upper')
+
+    # set prompt string
+    confirmPrompt = f'Are you sure you want to remove {choice}'
+
+    if choice == 'QUIT':
+        return memory
+    else:
+        if M.printConfirmation(confirmPrompt):
+            del memory[choice]
+        return memory
+

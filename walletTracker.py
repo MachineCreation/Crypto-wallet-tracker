@@ -27,7 +27,6 @@
 # -USDT
 # -XRP
 # -SOL
-
 # btc
 
 # Enter the dollar amount you would like to invest
@@ -35,40 +34,22 @@
 
 # Enter number in valid US currency format.
 # Example: $1 = 1.00
-# 1000.89
+# 0
+# Invalid entry!
+# Enter number in valid US currency format.
+# Example: $1 = 1.00
+# 0.00
 
 # Asset                                      BTC
-# Total Investment                      $1000.89
-# Last investment date                  07-09-25
-# 30 day projection                     $1074.87
+# Total Investment                         $0.00
+# Last investment date                  07-16-25
+# 30 day projection                        $0.00
 
 # Enter what you would like to do from the choices below
 # -add
 # -view
+# -delete
 # -quit
-
-
-# quit
-
-# ------------------------------------------------------------------------------
-
-
-# Have a wonderful day!
-# ------------------------------------------------------------------------------
-
-# Would you like to run the wallet again? Y/N?y
-# ------------------------------------------------------------------------------
-
-# Welcome to the Crypto Investment Tracker app
-# Here you can log and track your different investments and get a 30 day projected growth based on your coin's previous 12 months.
-
-# ------------------------------------------------------------------------------
-
-# Enter what you would like to do from the choices below
-# -add
-# -view
-# -quit
-
 
 # add
 
@@ -78,7 +59,6 @@
 # -USDT
 # -XRP
 # -SOL
-
 # sol
 
 # Enter the dollar amount you would like to invest
@@ -86,18 +66,107 @@
 
 # Enter number in valid US currency format.
 # Example: $1 = 1.00
-# 345.75
+# 1000.89
 
 # Asset                                      SOL
-# Total Investment                       $345.75
-# Last investment date                  07-09-25
-# 30 day projection                      $348.46
+# Total Investment                      $1000.89
+# Last investment date                  07-16-25
+# 30 day projection                     $1004.48
 
 # Enter what you would like to do from the choices below
 # -add
 # -view
+# -delete
 # -quit
 
+# view
+
+# Asset                                      BTC
+# Total Investment                         $0.00
+# Last investment date                  07-16-25
+# 30 day projection                        $0.00
+
+# Asset                                      SOL
+# Total Investment                      $1000.89
+# Last investment date                  07-16-25
+# 30 day projection                     $1004.48
+
+# Number of assets                             2
+# Total investments                     $1000.89
+# 30 Day projection                     $1004.48
+
+# Press enter to continue.
+
+# Enter what you would like to do from the choices below
+# -add
+# -view
+# -delete
+# -quit
+
+# delete
+
+# Please choose investment you would like to delete
+#  or type quit to go back to the main menu
+# -BTC
+# -SOL
+# -QUIT
+# btc
+# Are you sure you want to remove BTC
+# continue? y/n
+# y
+# Enter what you would like to do from the choices below
+# -add
+# -view
+# -delete
+# -quit
+
+# delete
+
+# Please choose investment you would like to delete
+#  or type quit to go back to the main menu
+# -SOL
+# -QUIT
+# sol
+# Are you sure you want to remove SOL
+# continue? y/n
+# n
+# Enter what you would like to do from the choices below
+# -add
+# -view
+# -delete
+# -quit
+
+# view
+
+# Asset                                      SOL
+# Total Investment                      $1000.89
+# Last investment date                  07-16-25
+# 30 day projection                     $1004.48
+
+# Number of assets                             1
+# Total investments                     $1000.89
+# 30 Day projection                     $1004.48
+
+# Press enter to continue.
+
+# Enter what you would like to do from the choices below
+# -add
+# -view
+# -delete
+# -quit
+
+# delete
+
+# Please choose investment you would like to delete
+#  or type quit to go back to the main menu
+# -SOL
+# -QUIT
+# quit
+# Enter what you would like to do from the choices below
+# -add
+# -view
+# -delete
+# -quit
 
 # quit
 
@@ -109,6 +178,8 @@
 
 # Would you like to run the wallet again? Y/N?
 # n
+# ----------------------------------------------------------------------------
+
 
 # Python modules
 

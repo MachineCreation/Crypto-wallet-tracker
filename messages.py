@@ -43,9 +43,21 @@ def print_menu_options(opt, prompt = "Enter what you would like to do from the c
     print(prompt)
     for o in opt:
         print(f'-{o}')
-    print()         #for UI readability
 
-
+def printConfirmation(action, prompt = 'continue? y/n\n'):
+    '''
+    prompts the user to confirm a choice with y/n
+    :args: action: string, prompt: string default continue?
+    :inputs: confirm: string
+    :return: confirm: boolean
+    '''
+    print(action)
+    while True:
+        uInput = input(prompt).lower()
+        if uInput != 'n' and uInput != 'y':
+            printInputError('invalid entry')
+        else:
+            return uInput == 'y'
 
 def exitMessage():
     '''
