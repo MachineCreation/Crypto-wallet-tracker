@@ -18,7 +18,7 @@ def run_menu(memory, coins):
     :inputs: None
     :return: None
     '''
-    options = ['add', 'view', 'delete', 'quit']       # normally wouldn't create a constant here. might move it later
+    options = ['add', 'view', 'delete', 'quit', 'refresh']       # normally wouldn't create a constant here. might move it later
     while True:
             
         if memory != {}:    
@@ -36,6 +36,8 @@ def run_menu(memory, coins):
                 view_portfolio(memory)
             elif choice == 'delete':
                 memory = delete_from_portfolio(memory)
+            elif choice == 'refresh':
+                coins = refresh_supported_coins_list()
             else:
                 return memory
         else:
@@ -163,3 +165,20 @@ def delete_from_portfolio(memory):
             del memory[choice]
         return memory
 
+def refresh_supported_coins_list():
+    '''
+    Prompt user for number of coins they would like to have in their list
+    :args: coins: str list
+    :inputs: numCoins: int
+    :return: coins: str list
+    '''
+    numCoins = 0
+    while True:
+        numCoins = V.validateInteger('Please enter the number of coins you would like to view\nupto 15\n')
+        if not 0 < numCoins < 16:
+            M.printInputError()
+        else:
+            sc = C.compileSupportedCoinsList(numCoins)
+            print(f'\nYour coin list length has been updated to {len(sc)}\n')
+            return 
+    

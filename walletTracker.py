@@ -24,128 +24,150 @@
 # Please choose coin from list
 # -BTC
 # -ETH
-# -USDT
 # -XRP
+# -USDT
 # -SOL
-# btc
+# -DOGE
+# -ADA
+# -XLM
+# -SUI
+# -LINK
+# -HBAR
+# -AVAX
+# -BCH
+# -LTC
+# -SHIB
+# shib
 
 # Enter the dollar amount you would like to invest
 #  --Example: 10.00
 
 # Enter number in valid US currency format.
 # Example: $1 = 1.00
-# 0
-# Invalid entry!
-# Enter number in valid US currency format.
-# Example: $1 = 1.00
-# 0.00
+# 1000.00
 
-# Asset                                      BTC
-# Total Investment                         $0.00
-# Last investment date                  07-16-25
-# 30 day projection                        $0.00
+# Asset                                     SHIB
+# Total Investment                      $1000.00
+# Last investment date                  07-22-25
+# 30 day projection                      $988.50
 
 # Enter what you would like to do from the choices below
 # -add
 # -view
 # -delete
 # -quit
+# -refresh
 
 # add
 
 # Please choose coin from list
 # -BTC
 # -ETH
-# -USDT
 # -XRP
+# -USDT
 # -SOL
-# sol
+# -DOGE
+# -ADA
+# -XLM
+# -SUI
+# -LINK
+# -HBAR
+# -AVAX
+# -BCH
+# -LTC
+# -SHIB
+# sui
 
 # Enter the dollar amount you would like to invest
 #  --Example: 10.00
 
 # Enter number in valid US currency format.
 # Example: $1 = 1.00
-# 1000.89
+# 2500.00
 
-# Asset                                      SOL
-# Total Investment                      $1000.89
-# Last investment date                  07-16-25
-# 30 day projection                     $1004.48
-
-# Enter what you would like to do from the choices below
-# -add
-# -view
-# -delete
-# -quit
-
-# view
-
-# Asset                                      BTC
-# Total Investment                         $0.00
-# Last investment date                  07-16-25
-# 30 day projection                        $0.00
-
-# Asset                                      SOL
-# Total Investment                      $1000.89
-# Last investment date                  07-16-25
-# 30 day projection                     $1004.48
-
-# Number of assets                             2
-# Total investments                     $1000.89
-# 30 Day projection                     $1004.48
-
-# Press enter to continue.
+# Asset                                      SUI
+# Total Investment                      $2500.00
+# Last investment date                  07-22-25
+# 30 day projection                     $3277.71
 
 # Enter what you would like to do from the choices below
 # -add
 # -view
 # -delete
 # -quit
+# -refresh
 
-# delete
+# refresh
 
-# Please choose investment you would like to delete
-#  or type quit to go back to the main menu
+# Please enter the number of coins you would like to view
+# upto 15
+# 5
+
+# ETH2 data not supported
+# Not added to support list
+# BNB data not supported
+# Not added to support list
+# USDC data not supported
+# Not added to support list
+
+# Your coin list length has been updated to 5
+
+# Enter what you would like to do from the choices below
+# -add
+# -view
+# -delete
+# -quit
+# -refresh
+
+# add
+
+# Please choose coin from list
 # -BTC
+# -ETH
+# -XRP
+# -USDT
 # -SOL
-# -QUIT
-# btc
-# Are you sure you want to remove BTC
-# continue? y/n
-# y
+# xrp
+
+# Enter the dollar amount you would like to invest
+#  --Example: 10.00
+
+# Enter number in valid US currency format.
+# Example: $1 = 1.00
+# 4500.00
+
+# Asset                                      XRP
+# Total Investment                      $4500.00
+# Last investment date                  07-22-25
+# 30 day projection                     $6313.12
+
 # Enter what you would like to do from the choices below
 # -add
 # -view
 # -delete
 # -quit
-
-# delete
-
-# Please choose investment you would like to delete
-#  or type quit to go back to the main menu
-# -SOL
-# -QUIT
-# sol
-# Are you sure you want to remove SOL
-# continue? y/n
-# n
-# Enter what you would like to do from the choices below
-# -add
-# -view
-# -delete
-# -quit
+# -refresh
 
 # view
 
-# Asset                                      SOL
-# Total Investment                      $1000.89
-# Last investment date                  07-16-25
-# 30 day projection                     $1004.48
+# Asset                                     SHIB
+# Total Investment                      $1000.00
+# Last investment date                  07-22-25
+# 30 day projection                      $988.50
 
-# Number of assets                             1
-# Total investments                     $1000.89
-# 30 Day projection                     $1004.48
+# Asset                                      SUI
+# Total Investment                      $2500.00
+# Last investment date                  07-22-25
+# 30 day projection                     $3277.71
+
+# Asset                                      XRP
+# Total Investment                      $4500.00
+# Last investment date                  07-22-25
+# 30 day projection                     $6313.12
+
+# Number of assets                             3
+# Total investments                     $8000.00
+# 30 Day projection                    $10579.33
 
 # Press enter to continue.
 
@@ -154,19 +176,7 @@
 # -view
 # -delete
 # -quit
-
-# delete
-
-# Please choose investment you would like to delete
-#  or type quit to go back to the main menu
-# -SOL
-# -QUIT
-# quit
-# Enter what you would like to do from the choices below
-# -add
-# -view
-# -delete
-# -quit
+# -refresh
 
 # quit
 
@@ -178,8 +188,7 @@
 
 # Would you like to run the wallet again? Y/N?
 # n
-# ----------------------------------------------------------------------------
-
+# ------------------------------------------------------------------------------
 
 # Python modules
 

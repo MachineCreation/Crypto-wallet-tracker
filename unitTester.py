@@ -3,6 +3,7 @@ import validations as V
 import memoryRetrieval as MR
 import crypto as C
 import walletTracker as L2
+import menu
 from datetime import date, datetime, timedelta
 
 # test welcome message
@@ -40,9 +41,12 @@ from datetime import date, datetime, timedelta
 # }
 # L2.print_investment(test['BTC'])
 
-day = date.today()
-sol = C.get_30day_percent('SOL', day)
-print(sol)
+# day = date.today()
+# sol = C.get_30day_percent('SOL', day)
+# print(sol)
+
+coins = menu.refresh_supported_coins_list()
+print(coins)
 # ------------------------------------------------------------------------------
 
 # test memory retrieval
@@ -54,4 +58,5 @@ print(sol)
 
 # test crypto.py
 
-# C.compileSupportedCoinsList()
+# coins = C.compileSupportedCoinsList(10)
+# print(coins)

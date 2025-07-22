@@ -13,7 +13,7 @@ import constants as Con
 
 # API endpoints
 
-rawAssetsEndpoint = f'https://api.coinbase.com/v2/assets/search?base=USD&limit={Con.LIMIT}'
+rawAssetsEndpoint = f'https://api.coinbase.com/v2/assets/search?base=USD'
 
 # API calls
 
@@ -32,7 +32,7 @@ def getCoinTicker(coin, support = False):
         else:
             raise ValueError
     except ValueError:
-        print(f'An error occurred while fetching {coin} data')
+        print(f'{coin} data not supported')
         if support:
             print('Not added to support list')
         return None
@@ -52,12 +52,12 @@ def getCoinHistoricalData(coin, start, end, granularity = 86400, support = False
         else:
             raise ValueError
     except ValueError:
-        print(f'An error occurred fetching histories for {coin}')
+        print(f'{coin} histories not supported')
         if support:
             print('Not added to support list')
         return None
 
-def compileSupportedCoinsList():
+def compileSupportedCoinsList(numCoins):
     '''
     create a list of coin symbols to use as menu options
     :args: None
@@ -83,12 +83,15 @@ def compileSupportedCoinsList():
             response1 = getCoinTicker(coin, True)
             if response1:           # validate coin ticker
                 response2 = getCoinHistoricalData(coin, start, end, support=True)
-                if response2:       # validate coin history
+                if response2 and len(supportedCoins) < numCoins:       # validate coin history
                     supportedCoins.append(coin)
+                else:
+                    break
             # print(f'{coin} supported: {response1.ok}')
 
         if supportedCoins != []:
             MR.makeJson(supportedCoins, 'coin_list')
+            return supportedCoins
 
     except ValueError as e:
         print(f'An error occurred fetching coin list: {e}')
